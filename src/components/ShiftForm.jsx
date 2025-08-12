@@ -19,9 +19,9 @@ const ShiftForm = ({ currentTime, onSubmit }) => {
 
   // Simulated capacity data (would be fetched from backend in a real application)
   const [shiftsCapacity, setShiftsCapacity] = useState({
-    'shift1': { capacity: 5, current: 2 },
-    'shift2': { capacity: 5, current: 3 },
-    'shift3': { capacity: 5, current: 1 },
+    'shift1': { capacity: 5, current: 0 },
+    'shift2': { capacity: 5, current: 0 },
+    'shift3': { capacity: 5, current: 0 },
     'shift4': { capacity: 5, current: 0 },
     'weekend1': { capacity: 5, current: 2 },
     'weekend2': { capacity: 5, current: 3 },
@@ -30,19 +30,19 @@ const ShiftForm = ({ currentTime, onSubmit }) => {
 
   // Meal times capacity
   const [mealCapacity, setMealCapacity] = useState({
-    'meal1': { capacity: 4, current: 2 },
-    'meal2': { capacity: 4, current: 3 },
-    'meal3': { capacity: 4, current: 1 },
+    'meal1': { capacity: 4, current: 0 },
+    'meal2': { capacity: 4, current: 0 },
+    'meal3': { capacity: 4, current: 0 },
     'meal4': { capacity: 4, current: 0 },
-    'meal5': { capacity: 4, current: 2 },
+    'meal5': { capacity: 4, current: 0 },
   });
 
   // Room occupancy (simulation of at least 1 person per room)
   const [roomOccupancy, setRoomOccupancy] = useState({
-    'room1': 1, // At least one person in room 1
-    'room2': 1, // At least one person in room 2
-    'room3': 0, // No one in room 3
-    'room4': 2, // Two people in room 4
+    'room1': 0,
+    'room2': 0,
+    'room3': 0,
+    'room4': 0,
   });
 
   // Horarios base
